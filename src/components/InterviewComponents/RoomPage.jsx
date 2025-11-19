@@ -139,7 +139,9 @@ function RoomPage() {
 
     //socket work start
     // const socket = useMemo(() => io("http://localhost:5500"), []);
-    const socket = useMemo(() => io("https://socketnodejs-a2g8c8f7g7avaudc.southindia-01.azurewebsites.net"), []);
+  //  const socket = useMemo(() => io("https://socketnodejs-a2g8c8f7g7avaudc.southindia-01.azurewebsites.net"), []);
+
+  const socket = useMemo(() => io("https://socket-d4dl.onrender.com"), []);
 
     useEffect(() => {
         socket.emit('join-room', roomId);
@@ -949,3 +951,4 @@ function RoomPage() {
 }
 
 export default RoomPage;
+
