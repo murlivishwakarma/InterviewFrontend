@@ -124,7 +124,7 @@ function VideoCallWindow({ isFullscreen }) {
         zegoInstanceRef.current = null;
       }
     };
-  }, [roomId, currentUser]);
+  }, [roomId]);
 
   return (
     <div
@@ -231,6 +231,7 @@ export default VideoCallWindow;
 // }
 
 // export default VideoCallWindow;
+
 
 
 
