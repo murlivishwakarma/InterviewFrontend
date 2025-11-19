@@ -175,9 +175,9 @@ function VideoCallWindow({ isFullscreen }) {
     const serverSecret = import.meta.env.VITE_SERVER_SECRET;
 
     // MAKE SAFE & UNIQUE USER ID
-    const userID =
-      user._id ||
-      (user.email ? user.email.replace(/[@.]/g, "_") : Date.now().toString());
+    // const userID =
+    //   user._id ||
+    //   (user.email ? user.email.replace(/[@.]/g, "_") : Date.now().toString());
 
     const userName = user.name || user.email || "Guest";
 
@@ -188,7 +188,8 @@ function VideoCallWindow({ isFullscreen }) {
       appId,
       serverSecret,
       roomId,
-      userID,
+      //userID,
+      Date.now().toString(),
       userName
     );
 
@@ -230,6 +231,7 @@ function VideoCallWindow({ isFullscreen }) {
 }
 
 export default VideoCallWindow;
+
 
 
 
