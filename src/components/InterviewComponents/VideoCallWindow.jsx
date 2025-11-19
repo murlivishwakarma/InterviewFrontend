@@ -163,10 +163,13 @@ function VideoCallWindow({ isFullscreen }) {
     // ❗ VERY IMPORTANT
     if (!user) {
       console.log("User not loaded yet...");
-      return;
+      
     }
 
-    if (!containerRef.current) return;
+    if (!containerRef.current) {
+        console.log("Container is not loaded");
+      return;
+    };
 
     const appId = Number(import.meta.env.VITE_APP_ID);
     const serverSecret = import.meta.env.VITE_SERVER_SECRET;
@@ -227,6 +230,7 @@ function VideoCallWindow({ isFullscreen }) {
 }
 
 export default VideoCallWindow;
+
 
 
 
