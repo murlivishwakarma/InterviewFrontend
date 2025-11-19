@@ -72,7 +72,7 @@ function VideoCallWindow({ isFullscreen }) {
   const zegoInstanceRef = useRef(null);
   const containerRef = useRef(null);
 
-  const currentUser = useSelector((state) => state.user.user); // candidate or interviewer
+  const currentUser = useSelector((state) => state.user); // candidate or interviewer
 
   useEffect(() => {
     const initZego = async () => {
@@ -141,6 +141,7 @@ function VideoCallWindow({ isFullscreen }) {
 }
 
 export default VideoCallWindow;
+
 
 
 
