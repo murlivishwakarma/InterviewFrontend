@@ -48,7 +48,7 @@ function CandidateRoom() {
   //  const socket = useMemo(() => io("https://socketnodejs-a2g8c8f7g7avaudc.southindia-01.azurewebsites.net"), []);
     // const socket = useMemo(() => io("http://localhost:5500"), []);
 
-    const socket = useMemeo(()=> io("https://socket-d4dl.onrender.com"),[]);
+    const socket = useMemo(()=> io("https://socket-d4dl.onrender.com"),[]);
 
     useEffect(() => {
         socket.emit('join-room', roomId);
@@ -349,3 +349,4 @@ function CandidateRoom() {
 
 
 export default CandidateRoom;
+
