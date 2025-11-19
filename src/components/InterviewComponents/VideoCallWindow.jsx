@@ -181,8 +181,8 @@ function VideoCallWindow({ isFullscreen }) {
 
     const userName = user.name || user.email || "Guest";
 
-    console.log("Zego UserID:", userID);
-    console.log("Zego Username:", userName);
+ //   console.log("Zego UserID:", userID);
+ //   console.log("Zego Username:", userName);
 
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       appId,
@@ -231,6 +231,7 @@ function VideoCallWindow({ isFullscreen }) {
 }
 
 export default VideoCallWindow;
+
 
 
 
