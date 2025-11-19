@@ -72,7 +72,7 @@ function VideoCallWindow({ isFullscreen }) {
   const zegoInstanceRef = useRef(null);
   const containerRef = useRef(null);
 
-  const currentUser = useSelector((state) => state.user); // candidate or interviewer
+//  const currentUser = useSelector((state) => state.user); // candidate or interviewer
 
   useEffect(() => {
     const initZego = async () => {
@@ -82,15 +82,16 @@ function VideoCallWindow({ isFullscreen }) {
         const appId = Number(import.meta.env.VITE_APP_ID);
         const serverSecret = import.meta.env.VITE_SERVER_SECRET;
 
-        const userID = currentUser._id; // unique for each participant
-        const userName = currentUser.name || currentUser.email;
+      //  const userID = currentUser._id; // unique for each participant
+     //   const userName = currentUser.name || currentUser.email;
 
         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
           appId,
           serverSecret,
           roomId,
-          userID,
-          userName
+       //   userID,
+          Date.now().toString(),
+          "userName"
         );
 
         const zp = ZegoUIKitPrebuilt.create(kitToken);
@@ -141,6 +142,7 @@ function VideoCallWindow({ isFullscreen }) {
 }
 
 export default VideoCallWindow;
+
 
 
 
